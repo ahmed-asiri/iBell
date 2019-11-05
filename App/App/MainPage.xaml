@@ -1,0 +1,67 @@
+﻿<ContentPage x:Class="App.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <FlexLayout Direction="Column"
+                AlignItems="Stretch"
+                JustifyContent ="SpaceBetween"
+                BackgroundColor="#f2b85a">
+        <FlexLayout JustifyContent="SpaceBetween"
+                    HeightRequest="70" 
+                    Direction="Row" 
+                    BackgroundColor="#555" 
+                    AlignItems="Center">
+            <Label Text="iBell" 
+                   TextColor="#efefef"
+                   FontSize="35"
+                   VerticalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   Margin="5,0,0,0"/>
+            <ImageButton Source="https://i.ibb.co/pJ3xMnH/menu-4-512.png"
+                   HeightRequest="40"/>
+        </FlexLayout>
+        <FlexLayout HeightRequest="440"
+                    Direction="Column"
+                    JustifyContent="Center"
+                    AlignItems="Center">
+            <Button HeightRequest="270"
+                    WidthRequest="270"
+                    CornerRadius="500"
+                    Text="وصلت"
+                    FontSize="55"
+                    TextColor="#efefef"
+                    BackgroundColor="SeaGreen"
+                    BorderWidth="5"
+                    BorderColor="#efefef"
+                    x:Name="Btn"
+                    Clicked="Btn_Clicked"/>
+        </FlexLayout>
+        <FlexLayout AlignItems="Center"
+                    HeightRequest="150" 
+                    Direction="Column"
+                    JustifyContent="Start">
+            <Frame WidthRequest="250"
+                   Padding="10,10,10,10"
+                   CornerRadius="10"
+                   HeightRequest="50"
+                   BackgroundColor="SeaGreen">
+                <Picker 
+                    BackgroundColor="SeaGreen"
+                    TextColor="#efefef"
+                    TitleColor="#EFEFEF"
+                    Title="اختر الطالب"
+                    FontSize="25">
+                    <Picker.Items>
+                        <x:String>أحمد عسيري</x:String>
+                        <x:String>خالد عسيري</x:String>
+                        <x:String>ايمن الجدعاني</x:String>
+                        <x:String>مهند الزهراني</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Frame>
+        </FlexLayout>
+    </FlexLayout>
+</ContentPage>
